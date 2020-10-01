@@ -23,12 +23,15 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = true;
         }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
+        }
     }
 
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
-        crouch = false;
     }
 }
