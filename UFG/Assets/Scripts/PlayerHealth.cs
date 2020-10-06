@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSkeleton : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
 
     public int maxHealth = 100;
@@ -21,13 +21,16 @@ public class PlayerSkeleton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
         }
+        */
+        
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
