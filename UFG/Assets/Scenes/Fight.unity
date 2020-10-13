@@ -633,7 +633,7 @@ MonoBehaviour:
   controller: {fileID: 150749387}
   animator: {fileID: 150749390}
   runSpeed: 12
-  playerId: 
+  playerId: P2
 --- !u!95 &150749390
 Animator:
   serializedVersion: 3
@@ -1226,7 +1226,7 @@ MonoBehaviour:
   controller: {fileID: 1257111801}
   animator: {fileID: 1257111804}
   runSpeed: 8
-  playerId: 
+  playerId: P1
 --- !u!114 &1257111801
 MonoBehaviour:
   m_ObjectHideFlags: 0
