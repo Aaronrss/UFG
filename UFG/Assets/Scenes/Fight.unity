@@ -590,13 +590,14 @@ MonoBehaviour:
   m_JumpForce: 600
   m_CrouchSpeed: 0.4
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 55
   m_GroundCheck: {fileID: 952019966}
   m_CeilingCheck: {fileID: 528992567}
   m_CrouchDisableCollider: {fileID: 0}
+  oponent: {fileID: 1257111797}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1249,6 +1250,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 138540463}
   m_CeilingCheck: {fileID: 1690859958}
   m_CrouchDisableCollider: {fileID: 0}
+  oponent: {fileID: 150749385}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
