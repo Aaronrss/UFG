@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
             this.enabled = false;
 
             // Go to credits
-            SceneManager.LoadScene("Credits");
+                SceneManager.LoadScene("Credits");
         }
     }
 }
