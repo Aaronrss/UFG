@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,14 +10,14 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    public HealthBar  healthBar;
+    public HealthBar healthBar;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;  
-        healthBar.SetMaxHealth(maxHealth); 
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -28,17 +29,17 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(20);
         }
         */
-        
+
     }
 
-    public  void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
 
         healthBar.SetHealth(currentHealth);
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -52,6 +53,9 @@ public class PlayerHealth : MonoBehaviour
             // Disable the enemy
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
+
+            // Go to credits
+            SceneManager.LoadScene("Credits");
         }
     }
 }
