@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    //VARIABLES
     public Animator animator;
     public float[] AttackDelay;
     float NextAttack = 0;
@@ -11,13 +12,16 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackRange =0.05f;
     public float[] AttackStrength;
+    public KeyCode AttackButton;
+    public AudioSource audioHit;
+    public PlayerHealth ownPlayerHealth;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        audioHit = GetComponent<AudioSource>();
+        ownPlayerHealth = gameObject.GetComponent <PlayerHealth>();
     }
 
+    // METODO PARA REGISTRAR SI HAY UN GOLPE
     public void checkHit(){
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach(Collider2D enemy in hitEnemies)
@@ -30,6 +34,8 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
+
+    // METODO PARA VISUALIZAR GRAFICAMENTE LA DISTANCIA DEL RANGO DE ATAQUE
    void OnDrawGizmosSelected() {
    if (attackPoint == null)
    return;
@@ -38,11 +44,13 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && Time.time > NextAttack)
+        if(Input.GetKeyDown(AttackButton) && Time.time > NextAttack && ownPlayerHealth.alive)
         {
             // Play an attack animation
             animator.SetTrigger("IsAttacking");
+            audioHit.Play();
 
+            // FUNCION PARA RETRASAR ATAQUES CONTINUOS
             NextAttack = Time.time+AttackDelay[0];
         }   
     }

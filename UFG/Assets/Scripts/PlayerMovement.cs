@@ -12,44 +12,53 @@ public class PlayerMovement : MonoBehaviour
     bool crouch = false;
 
     public string playerId;
+    public PlayerHealth ownPlayerHealth;
+
+    void Start() {
+        ownPlayerHealth = gameObject.GetComponent <PlayerHealth>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal" + playerId) * runSpeed;
-        // animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        animator.SetFloat("Speed", horizontalMove);
-        if (horizontalMove != 0)
+        if(ownPlayerHealth.alive)
         {
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetBool("isMoving", false);
-        }
+            horizontalMove = Input.GetAxisRaw("Horizontal" + playerId) * runSpeed;
+            // animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+            animator.SetFloat("Speed", horizontalMove);
+            if (horizontalMove != 0)
+            {
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
 
-        if (controller.m_FacingRight)
-        {
-            animator.SetBool("facingRight", true);
-        }
-        else if (!controller.m_FacingRight)
-        {
-            animator.SetBool("facingRight", false);
-        }
+            if (controller.m_FacingRight)
+            {
+                animator.SetBool("facingRight", true);
+            }
+            else if (!controller.m_FacingRight)
+            {
+                animator.SetBool("facingRight", false);
+            }
 
-        if (Input.GetButtonDown("Jump" + playerId))
-        {
-            jump = true;
-        }
-        if (Input.GetButtonDown("Crouch" + playerId))
-        {
-            crouch = true;
-            animator.SetBool("IsCrouching", true);
-        }
-        else if (Input.GetButtonUp("Crouch" + playerId))
-        {
-            crouch = false;
-            animator.SetBool("IsCrouching", false);
+            if (Input.GetButtonDown("Jump" + playerId))
+            {
+                Debug.Log("W" + name);
+                jump = true;
+            }
+            if (Input.GetButtonDown("Crouch" + playerId))
+            {
+                crouch = true;
+                animator.SetBool("IsCrouching", true);
+            }
+            else if (Input.GetButtonUp("Crouch" + playerId))
+            {
+                crouch = false;
+                animator.SetBool("IsCrouching", false);
+            }
         }
     }
 
