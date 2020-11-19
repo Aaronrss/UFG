@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnituEngine.UI;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -88,27 +88,27 @@ public class IntroSceneManager : MonoBehaviour {
 
     }
 
-    void HandleSelectedOption()
-    {
-        switch(activeElement)
-        {
-            case 0:
-                CharacterManager.GetInstance().numberOfUsers = 1;
-                break;
-            case 1:
-                CharacterManager.GetInstance().numberOfUsers = 2;
-                CharacterManager.GetInstance().player[1].playerType = PlayerBase.PlayerType.user;
-                break;
-        }
-    }
+    // void HandleSelectedOption()
+    // {
+    //     switch(activeElement)
+    //     {
+    //         case 0:
+    //             CharacterManager.GetInstance().numberOfUsers = 1;
+    //             break;
+    //         case 1:
+    //             CharacterManager.GetInstance().numberOfUsers = 2;
+    //             CharacterManager.GetInstance().player[1].playerType = PlayerBase.PlayerType.user;
+    //             break;
+    //     }
+    // }
 
-    IEnumerator LoadLevel()
-    {
-        HandleSelectedOption();
-        yield return new WaitForSeconds(0.6f);
+    // IEnumerator LoadLevel()
+    // {
+    //     HandleSelectedOption();
+    //     yield return new WaitForSeconds(0.6f);
 
-        // For Unity 5.3 +
-        SceneManager.LoadSceneAsync("select", LoadSceneMode.Single);
+    //     // For Unity 5.3 +
+    //     SceneManager.LoadSceneAsync("select", LoadSceneMode.Single);
 
-    }
+    // }
 }
