@@ -1,9 +1,11 @@
+
+
 using UnityEngine;
 using System.Collections;
 
 [System.Serializable]
 public class ButtonRef : MonoBehaviour {
-    
+    /*
     public GameObject selectIndicator;
     public bool selected;
 
@@ -16,4 +18,5 @@ public class ButtonRef : MonoBehaviour {
     {
         selectIndicator.SetActive(selected);    
     }
+    */
 }
