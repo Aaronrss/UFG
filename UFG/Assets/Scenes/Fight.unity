@@ -495,7 +495,7 @@ MonoBehaviour:
   attackRange: 0.5
   AttackStrength:
   - 0
-  AttackButton: 256
+  AttackButton: 46
   audioHit: {fileID: 150749391}
   ownPlayerHealth: {fileID: 0}
 --- !u!114 &150749387
