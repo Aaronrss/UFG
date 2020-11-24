@@ -487,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 150749390}
   AttackDelay:
-  - 0.5
+  - 1
   attackPoint: {fileID: 1849678830}
   enemyLayers:
     serializedVersion: 2
