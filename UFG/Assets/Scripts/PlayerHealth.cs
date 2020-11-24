@@ -58,7 +58,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator FinishFight()
     {
         //TIEMPO DE ESPERA 
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(5);
         // Go to credits
         SceneManager.LoadScene("Credits");
     }

@@ -17,7 +17,7 @@ public class FighterSelection : MonoBehaviour
 
         foreach (var fighter in fighters)
         {
-            GameObject go = Instantiate(fighter.fighter, Quaternion.identity);  
+            // GameObject go = Instantiate(fighter.fighter, Quaternion.identity);  
         }
         
     }
