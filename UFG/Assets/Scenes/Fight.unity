@@ -697,6 +697,12 @@ MonoBehaviour:
   power: 0
   staminaDelay: 1
   nextUpdate: 0
+  staminaColor:
+    serializedVersion: 2
+    rgba: 4294901760
+  powered:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &266698343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1146,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+  fill: {fileID: 0}
 --- !u!114 &680109257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,6 +1883,12 @@ MonoBehaviour:
   power: 0
   staminaDelay: 1
   nextUpdate: 0
+  staminaColor:
+    serializedVersion: 2
+    rgba: 4294901760
+  powered:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &1408472886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,6 +2203,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+  fill: {fileID: 0}
 --- !u!114 &1503503942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2401,6 +2415,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  fill: {fileID: 917322890}
 --- !u!1 &1770482565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,6 +2717,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  fill: {fileID: 1992492924}
 --- !u!1 &1992492922
 GameObject:
   m_ObjectHideFlags: 0

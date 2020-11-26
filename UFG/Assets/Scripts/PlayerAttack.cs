@@ -16,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
     public AudioSource audioHit;
     public PlayerHealth ownPlayerHealth;
     public StaminaBar ownPlayerStamina;
+    public bool playerMoves = true;
 
     void Start() {
         audioHit = GetComponent<AudioSource>();
@@ -34,6 +35,10 @@ public class PlayerAttack : MonoBehaviour
             {
                 ph.TakeDamage(10);
                 ownPlayerStamina.IncreaseStamina(20);
+                if (!ph.alive)
+                {
+                    playerMoves = false;
+                }
             }
         }
     }

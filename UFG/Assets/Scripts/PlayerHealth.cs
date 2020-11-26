@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
             animator.SetBool("IsDead", true);
 
             // Disable the enemy
-            GetComponent<Collider2D>().enabled = false;
+            //GetComponent<Collider2D>().enabled = false;
 
             // this.enabled = false; (desactiva script)
             // LLAMA AL METODO FINISHFIGHT EN UNA CORUTINA

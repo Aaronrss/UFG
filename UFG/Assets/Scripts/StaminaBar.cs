@@ -12,6 +12,9 @@ public class StaminaBar : MonoBehaviour
     public bool power = false;
     public float staminaDelay = 0.1f;
     public float nextUpdate;
+    public Color32 staminaColor;
+    public Color32 powered;
+
 
 
     // Start is called before the first frame update
@@ -33,6 +36,7 @@ public class StaminaBar : MonoBehaviour
         //CONDICION QUE DETECTA SI SE MUERE
         if (currentStamina >= 100)
         {
+            staminaBar.SetColor(powered);
             power = true;
         }
     }
@@ -48,6 +52,7 @@ public class StaminaBar : MonoBehaviour
     public void Reset()
     {
         // se borra el stamina si se usa el poder
+        staminaBar.SetColor(staminaColor);
         power = false;
     }
 
