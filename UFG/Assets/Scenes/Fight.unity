@@ -219,7 +219,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3377ca66dda724742a2cca5ef974ec83, type: 3}
   - {fileID: 21300000, guid: d9b31ebd60af68c469212c1a9f513e74, type: 3}
   Ren: {fileID: 0}
-  index: 1
+  index: 0
 --- !u!1 &90461495
 GameObject:
   m_ObjectHideFlags: 0
