@@ -15,10 +15,12 @@ public class PlayerAttack : MonoBehaviour
     public KeyCode AttackButton;
     public AudioSource audioHit;
     public PlayerHealth ownPlayerHealth;
+    public StaminaBar ownPlayerStamina;
 
     void Start() {
         audioHit = GetComponent<AudioSource>();
         ownPlayerHealth = gameObject.GetComponent <PlayerHealth>();
+        ownPlayerStamina = gameObject.GetComponent <StaminaBar>();
     }
 
     // METODO PARA REGISTRAR SI HAY UN GOLPE
@@ -30,7 +32,8 @@ public class PlayerAttack : MonoBehaviour
             PlayerHealth ph = enemy.gameObject.GetComponent <PlayerHealth>();
             if(ph != null)
             {
-                ph.TakeDamage(20); 
+                ph.TakeDamage(20);
+                ownPlayerStamina.IncreaseStamina(20);
             }
         }
     }

@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 150749390}
   - component: {fileID: 150749386}
   - component: {fileID: 150749391}
+  - component: {fileID: 150749392}
   m_Layer: 9
   m_Name: Player2
   m_TagString: Untagged
@@ -498,6 +499,7 @@ MonoBehaviour:
   AttackButton: 46
   audioHit: {fileID: 150749391}
   ownPlayerHealth: {fileID: 0}
+  ownPlayerStamina: {fileID: 0}
 --- !u!114 &150749387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,6 +679,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &150749392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150749381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6528d9fbcdd2a4de58a5629876bbe82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 100
+  currentStamina: 0
+  staminaBar: {fileID: 1923065981}
+  power: 0
+  staminaDelay: 1
+  nextUpdate: 0
 --- !u!1 &266698343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1396,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1badf1f4e596542208ce43742790b9db, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -1494,6 +1514,7 @@ GameObject:
   - component: {fileID: 1257111805}
   - component: {fileID: 1257111804}
   - component: {fileID: 1257111806}
+  - component: {fileID: 1257111807}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Untagged
@@ -1740,6 +1761,7 @@ MonoBehaviour:
   AttackButton: 32
   audioHit: {fileID: 1257111806}
   ownPlayerHealth: {fileID: 0}
+  ownPlayerStamina: {fileID: 0}
 --- !u!82 &1257111806
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1836,6 +1858,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1257111807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257111795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6528d9fbcdd2a4de58a5629876bbe82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 100
+  currentStamina: 0
+  staminaBar: {fileID: 1768842261}
+  power: 0
+  staminaDelay: 1
+  nextUpdate: 0
 --- !u!1 &1408472886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,6 +2280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768842259}
   - component: {fileID: 1768842260}
+  - component: {fileID: 1768842261}
   m_Layer: 5
   m_Name: Stamina Bar A
   m_TagString: Untagged
@@ -2318,6 +2359,48 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1768842261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768842258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4e8307c12bf4b0aa5ca0a7be84a9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1768842260}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
 --- !u!1 &1770482565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,6 +2581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923065979}
   - component: {fileID: 1923065980}
+  - component: {fileID: 1923065981}
   m_Layer: 5
   m_Name: Stamina Bar B
   m_TagString: Untagged
@@ -2523,9 +2607,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: -100}
+  m_AnchoredPosition: {x: -300, y: -100}
   m_SizeDelta: {x: 100, y: 8}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1923065980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2568,7 +2652,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1992492923}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 20
   m_WholeNumbers: 0
@@ -2576,6 +2660,48 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1923065981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923065978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4e8307c12bf4b0aa5ca0a7be84a9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1923065980}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
 --- !u!1 &1992492922
 GameObject:
   m_ObjectHideFlags: 0
