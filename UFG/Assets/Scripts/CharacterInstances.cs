@@ -14,6 +14,8 @@ public class CharacterInstances : MonoBehaviour
     public HealthBar p2stamina;
     public LayerMask p1enemy;
     public LayerMask p2enemy;
+    public KeyCode p1attackButton;
+    public KeyCode p2attackButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,11 +44,16 @@ public class CharacterInstances : MonoBehaviour
         p1.GetComponent<StaminaBar>().staminaBar = p1stamina;
         p2.GetComponent<StaminaBar>().staminaBar = p2stamina;
 
+        // set attack button
+        p1.GetComponent<PlayerAttack>().AttackButton = p1attackButton;
+        p2.GetComponent<PlayerAttack>().AttackButton = p2attackButton;
+
         // set gravity
-        if (PlayerPrefs.GetInt("Stage") == 2)
+        if (PlayerPrefs.GetInt("Stage") == 1)
         {
             // cambiar gravedad
-            p1.GetComponent<RigidBody2D>().GravityScale = 4;
+            p1.GetComponent<Rigidbody2D>().gravityScale = 1;
+            p2.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
     }
 }
