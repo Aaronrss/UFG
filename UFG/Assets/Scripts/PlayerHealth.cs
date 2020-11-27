@@ -25,9 +25,6 @@ public class PlayerHealth : MonoBehaviour
     {
         // OPERACION PARA ALMACENAR VIDA Y REDUCIR DEPENDIENDO EL DAÑO
         currentHealth -= damage;
-        //DETECTA SI RECIBE UN GOLPE PARA ACTIVAR ANIMACION HIT
-        animator.SetTrigger("Hurt");
-
         // NOS PERMITE REVISAR VISUALMENTE EL ESTATUS DE VIDA
         healthBar.SetHealth(currentHealth);
 
@@ -36,6 +33,10 @@ public class PlayerHealth : MonoBehaviour
         {
             //MANDA LLAMAR METODO MUERTE
             Die();
+        } else
+        {
+            //DETECTA SI RECIBE UN GOLPE PARA ACTIVAR ANIMACION HIT
+            animator.SetTrigger("Hurt");
         }
 
         // METODO MUERTE
