@@ -789,12 +789,12 @@ MonoBehaviour:
   p1stamina: {fileID: 1768842261}
   p2health: {fileID: 680109256}
   p2stamina: {fileID: 1923065981}
-  p1enemy:
-    serializedVersion: 2
-    m_Bits: 512
-  p2enemy:
+  p1layer:
     serializedVersion: 2
     m_Bits: 256
+  p2layer:
+    serializedVersion: 2
+    m_Bits: 512
   p1attackButton: 32
   p2attackButton: 46
 --- !u!1 &917322888

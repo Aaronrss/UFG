@@ -12,8 +12,8 @@ public class CharacterInstances : MonoBehaviour
     public HealthBar p1stamina;
     public HealthBar p2health;
     public HealthBar p2stamina;
-    public LayerMask p1enemy;
-    public LayerMask p2enemy;
+    public LayerMask p1layer;
+    public LayerMask p2layer;
     public KeyCode p1attackButton;
     public KeyCode p2attackButton;
     // Start is called before the first frame update
@@ -28,9 +28,13 @@ public class CharacterInstances : MonoBehaviour
         p1.GetComponent<PlayerMovement>().playerId = "P1";
         p2.GetComponent<PlayerMovement>().playerId = "P2";
 
+        // set self layer
+        p1.layer = 8;
+        p2.layer = 9;
+
         // set oponent layer
-        p1.GetComponent<PlayerAttack>().enemyLayers = p1enemy;
-        p2.GetComponent<PlayerAttack>().enemyLayers = p2enemy;
+        p1.GetComponent<PlayerAttack>().enemyLayers = p2layer;
+        p2.GetComponent<PlayerAttack>().enemyLayers = p1layer;
 
         // set oponent
         p1.GetComponent<CharacterController2D>().oponent = p2.transform;
