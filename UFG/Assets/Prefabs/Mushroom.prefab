@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1764405098211533155}
   - component: {fileID: 670427777435842257}
   - component: {fileID: 9006861975943189756}
-  - component: {fileID: 6627755870719403431}
+  - component: {fileID: 7267163712495984713}
   m_Layer: 8
   m_Name: Mushroom
   m_TagString: Untagged
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48cb46856f3ff4ff3b9c6ca86ff13ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 7267163712495984713}
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d91ada3020642de981c0eebdcfddc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 7267163712495984713}
   AttackDelay: []
   attackPoint: {fileID: 0}
   enemyLayers:
@@ -269,7 +269,7 @@ MonoBehaviour:
   powered:
     serializedVersion: 2
     rgba: 16777215
---- !u!95 &6627755870719403431
+--- !u!95 &7267163712495984713
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ Animator:
   m_GameObject: {fileID: 1562440826111649109}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2db49ad0fc7114419a9b6551d7a354f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
