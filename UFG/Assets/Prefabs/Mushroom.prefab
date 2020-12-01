@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 6482959364272743116}
   - component: {fileID: 4659473835956713860}
   - component: {fileID: 7010865207745908143}
-  - component: {fileID: 1562440826111649110}
   - component: {fileID: 1764405098211533155}
   - component: {fileID: 670427777435842257}
   - component: {fileID: 9006861975943189756}
+  - component: {fileID: 6627755870719403431}
   m_Layer: 8
   m_Name: Mushroom
   m_TagString: Untagged
@@ -203,25 +203,6 @@ MonoBehaviour:
   runSpeed: 20
   playerId: 
   ownPlayerHealth: {fileID: 0}
---- !u!95 &1562440826111649110
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562440826111649109}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 680b6af72d1164004a617c8347b26ea0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1764405098211533155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +269,25 @@ MonoBehaviour:
   powered:
     serializedVersion: 2
     rgba: 16777215
+--- !u!95 &6627755870719403431
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562440826111649109}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3428853810354390910
 GameObject:
   m_ObjectHideFlags: 0
