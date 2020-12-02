@@ -216,13 +216,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7267163712495984713}
-  AttackDelay: []
+  AttackDelay:
+  - 0.5
   attackPoint: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
   attackRange: 0.04
-  AttackStrength: []
+  AttackStrength:
+  - 1
   AttackButton: 32
   audioHit: {fileID: 0}
   ownPlayerHealth: {fileID: 0}

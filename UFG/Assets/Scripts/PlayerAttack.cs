@@ -56,7 +56,7 @@ public class PlayerAttack : MonoBehaviour
         {
             // Play an attack animation
             animator.SetTrigger("IsAttacking");
-            audioHit.Play();
+            //audioHit.Play();
 
             // FUNCION PARA RETRASAR ATAQUES CONTINUOS
             NextAttack = Time.time+AttackDelay[0];
