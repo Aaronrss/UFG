@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3805467367008213405}
   - component: {fileID: 3829446358818198281}
   - component: {fileID: 5053129379357080141}
-  - component: {fileID: 5653391346049379941}
   - component: {fileID: 2989751109431690491}
   - component: {fileID: 4978684563553284282}
   - component: {fileID: 4593450588539833257}
@@ -21,7 +20,7 @@ GameObject:
   - component: {fileID: 872034479270050107}
   - component: {fileID: 4416337597419282260}
   m_Layer: 8
-  m_Name: Player1 (1)
+  m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +128,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.044305727, y: 0.095781}
+  m_Offset: {x: 0.04847392, y: -0.0042544305}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -140,24 +139,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.10558677, y: 0.3084095}
+  m_Size: {x: 0.113923155, y: 0.50848037}
   m_EdgeRadius: 0
---- !u!58 &5653391346049379941
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383747333454338959}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4f0d2ca67f1c74f5c8b73011288f8efb, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.055863224, y: -0.17517488}
-  serializedVersion: 2
-  m_Radius: 0.10034307
 --- !u!114 &2989751109431690491
 MonoBehaviour:
   m_ObjectHideFlags: 0

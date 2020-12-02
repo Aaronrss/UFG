@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 6482959364272743116}
   - component: {fileID: 4659473835956713860}
   - component: {fileID: 7010865207745908143}
-  - component: {fileID: 1764405098211533155}
   - component: {fileID: 670427777435842257}
+  - component: {fileID: 1764405098211533155}
   - component: {fileID: 9006861975943189756}
   - component: {fileID: 7267163712495984713}
   m_Layer: 8
@@ -35,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 1562440826111649109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.527, y: -0.172, z: 0}
-  m_LocalScale: {x: 1.1236454, y: 1.0603849, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 2971688720920755425}
   - {fileID: 491514438082679145}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c4fa6bfd185453e8247fd911f8666d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 200
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -199,27 +199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 4659473835956713860}
-  animator: {fileID: 0}
-  runSpeed: 20
+  animator: {fileID: 7267163712495984713}
+  runSpeed: 10
   playerId: 
   ownPlayerHealth: {fileID: 0}
---- !u!114 &1764405098211533155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562440826111649109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48cb46856f3ff4ff3b9c6ca86ff13ea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 7267163712495984713}
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 0}
-  alive: 1
 --- !u!114 &670427777435842257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +228,23 @@ MonoBehaviour:
   ownPlayerHealth: {fileID: 0}
   ownPlayerStamina: {fileID: 0}
   playerMoves: 1
+--- !u!114 &1764405098211533155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562440826111649109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cb46856f3ff4ff3b9c6ca86ff13ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7267163712495984713}
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  alive: 1
 --- !u!114 &9006861975943189756
 MonoBehaviour:
   m_ObjectHideFlags: 0
