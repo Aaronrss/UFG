@@ -783,6 +783,8 @@ MonoBehaviour:
   prefabs:
   - {fileID: 383747333454338959, guid: 9a075a08fe86a432188c3d95605b4859, type: 3}
   - {fileID: 8287531974064339434, guid: 9a42dc9c990774869afe4f510b727c6b, type: 3}
+  - {fileID: 7512327045369842051, guid: 49552306726ea6a4da197ba88c154ade, type: 3}
+  - {fileID: 1562440826111649109, guid: 5becb2876a743514bb774d81b07988e1, type: 3}
   p1pos: {fileID: 2032972258}
   p2pos: {fileID: 1395883442}
   p1health: {fileID: 1503503941}

@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Character 3
+  m_Text: Flying Eye
 --- !u!222 &23965241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -972,7 +972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Character 4
+  m_Text: Mushroom
 --- !u!222 &922183430
 CanvasRenderer:
   m_ObjectHideFlags: 0
