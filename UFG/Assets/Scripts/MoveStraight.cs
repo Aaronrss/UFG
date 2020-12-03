@@ -1,5 +1,6 @@
 ﻿/*
     Movment script for the bullet
+    Gilberto Echeverria 
 */
 
 

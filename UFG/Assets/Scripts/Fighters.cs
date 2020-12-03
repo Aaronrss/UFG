@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+    Creates an object call Fighter that has some atributes
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

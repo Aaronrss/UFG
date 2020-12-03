@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+    SCRIPT TO TEST IF THE PLAYER ATTACK IS NO LONER USED IN THE GAME
+
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

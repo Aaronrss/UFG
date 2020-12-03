@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+    SCRIPT THAT DEFINES HOW PLALYER MOVES
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,14 +19,19 @@ public class PlayerMovement : MonoBehaviour
     public PlayerHealth ownPlayerHealth;
 
     void Start() {
+        // CALL AND SAVE PLAYERHEALTH AS OWNPLAYERHEALTH
         ownPlayerHealth = gameObject.GetComponent <PlayerHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // CONDITION THAT CHECK IF PLAYER IS ALIVE IN ORDER TO LET THEM MOVE
         if(ownPlayerHealth.alive)
         {
+            // CONDITIONS THAT ACITVATE SOME ANIMATIONS
+
+
             horizontalMove = Input.GetAxisRaw("Horizontal" + playerId) * runSpeed;
             // animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
             animator.SetFloat("Speed", horizontalMove);

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+    This script define how the health and other bars interacts
+
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+    This script help with the selection of the fighter 
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

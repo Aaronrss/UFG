@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿/*
+    SCRIPT THAT CHANGE SCENES
+*/
+
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    // METODO QUE RECIBE ESCENA Y CAMBIA ESCENA
+    // METHOD THAT RECIVES THE SCENE AND CHANGE IT
     public void GoToScene(string name)
     {
         SceneManager.LoadScene(name);

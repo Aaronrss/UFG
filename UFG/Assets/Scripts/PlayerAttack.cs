@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
         ownPlayerStamina = gameObject.GetComponent <StaminaBar>();
     }
 
-    // METODO PARA REGISTRAR SI HAY UN GOLPE
+    // METHOD FOR REGISTER IF THERE ARE A HIT
     public void checkHit(){
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach(Collider2D enemy in hitEnemies)
@@ -47,7 +47,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    // METODO PARA VISUALIZAR GRAFICAMENTE LA DISTANCIA DEL RANGO DE ATAQUE
+    // METHOD FOR GRAPHICLY VISUALICE THE RANGE OF THE ATTACK
    void OnDrawGizmosSelected() {
    if (attackPoint == null)
    return;
@@ -56,16 +56,18 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // CONDITION TO ACTIVATE THE ATTACK
         if(Input.GetKeyDown(AttackButton) && Time.time > NextAttack && ownPlayerHealth.alive)
         {
             // Play an attack animation
             animator.SetTrigger("IsAttacking");
             //audioHit.Play();
 
-            // FUNCION PARA RETRASAR ATAQUES CONTINUOS
+            // FUNCTION TO DELAY OUR ATTACKS
             NextAttack = Time.time+AttackDelay[0];
         }
 
+        // CONDITION TO ACTIVATE THE SUPER ATTACK
         if(ownPlayerStamina.power == true && Input.GetKeyDown(AttackButtonSP) && ownPlayerHealth.alive)
         {
             animator.SetTrigger("IsAttackingSP");

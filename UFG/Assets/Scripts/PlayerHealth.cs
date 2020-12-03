@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+    THIS SCRIPT MODIFY THE HEALTH OF PLAYERS
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,51 +20,54 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // INITIATE THE HEALTH
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    // METODO PARA REGISTAR ATAQUE
+    // METHOD FOR DAMAGE HEATLH 
     public void TakeDamage(int damage)
     {
-        // OPERACION PARA ALMACENAR VIDA Y REDUCIR DEPENDIENDO EL DAÑO
+        // OPERATION FOR SAVE THE DAMAGE INTO CURRENT HEALTH 
         currentHealth -= damage;
-        // NOS PERMITE REVISAR VISUALMENTE EL ESTATUS DE VIDA
+        // VISUALY MODIFY THE HEALTH 
         healthBar.SetHealth(currentHealth);
 
-        //CONDICION QUE DETECTA SI SE MUERE
+        // CONDITION THAT DETECTS IF PLAYER STEAL ALIVE OR GET HURT 
         if (currentHealth <= 0)
         {
-            //MANDA LLAMAR METODO MUERTE
+            // CALL DIE METHOD
             Die();
         } else
         {
-            //DETECTA SI RECIBE UN GOLPE PARA ACTIVAR ANIMACION HIT
+            // ACTIVATE ANIMATION OF HIT 
             animator.SetTrigger("Hurt");
         }
 
-        // METODO MUERTE
+        // METHOD FOR DIE
         void Die()
         {
             // Debug.Log("We died!");
+            // CHANGE THE STATE OF THE BOOLEAN ALIVE TO FALSE
             alive = false;
-            // Die animation
+            // ACTIVATE DIE ANIMATION 
             animator.SetBool("IsDead", true);
 
             // Disable the enemy
             //GetComponent<Collider2D>().enabled = false;
 
             // this.enabled = false; (desactiva script)
-            // LLAMA AL METODO FINISHFIGHT EN UNA CORUTINA
+
+            // CALL METHOD FINISHFIGHT AS A COROUTINE
             StartCoroutine(FinishFight());
         }
     }
-    //METODO FINISHFIGHT
+    // METHOD FINISHFIGHT
     IEnumerator FinishFight()
     {
-        //TIEMPO DE ESPERA 
+        // DELAY TO CHANGE THE SCENE FIGHT TO CREDITS 
         yield return new WaitForSeconds(5);
-        // Go to credits
+        // CHANGE THE SCENE TO CREDITS
         SceneManager.LoadScene("Credits");
     }
 

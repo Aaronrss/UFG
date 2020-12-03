@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+    Makes every atribute of the game, preset, for instantiate it
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,7 +58,7 @@ public class CharacterInstances : MonoBehaviour
         p1.GetComponent<PlayerAttack>().AttackButton = p1attackButton;
         p2.GetComponent<PlayerAttack>().AttackButton = p2attackButton;
 
-        // set attack button
+        // set attack button super power
         p1.GetComponent<PlayerAttack>().AttackButtonSP = p1attackButtonSP;
         p2.GetComponent<PlayerAttack>().AttackButtonSP = p2attackButtonSP;
 

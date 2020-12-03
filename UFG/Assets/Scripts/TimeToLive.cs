@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+
+    GILBERTO ECHEVERRIA IDEA TO DESTORY A BULLET
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

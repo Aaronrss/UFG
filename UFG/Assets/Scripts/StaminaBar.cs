@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+    SCRIPT THAT DEFINES HOW THE STAMINA BAR INTERACTS
+
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,16 +34,16 @@ public class StaminaBar : MonoBehaviour
         ownPlayerHealth = gameObject.GetComponent <PlayerHealth>();
     }
 
-    // METODO PARA REGISTAR ATAQUE
+    // METHOD TO INCREASE STAMINA
     public void IncreaseStamina(int value)
     {
-        // OPERACION PARA ALMACENAR VIDA Y REDUCIR DEPENDIENDO EL DAÑO
+        // OPERATION TO INCREASE AND SAVE THE STAMINA
         currentStamina += value;
 
-        // NOS PERMITE REVISAR VISUALMENTE EL ESTATUS DE VIDA
+        // HELP TO VISULIZE THE STAMINA
         staminaBar.SetHealth(currentStamina);
 
-        //CONDICION QUE DETECTA SI SE MUERE
+        // CONDITION THAT DETECTS AND ACTIVATE THE SUPER POWER
         if (currentStamina >= 100)
         {
             staminaBar.SetColor(powered);
@@ -46,6 +52,7 @@ public class StaminaBar : MonoBehaviour
     }
     public void Update()
     {
+        // CONDITION THAT DETECTS IF PLAYER IS ALIVE TO CONTIUE INCREASING STAMINA
         if(ownPlayerHealth.alive)
         {
             if (Time.time > nextUpdate)
@@ -55,10 +62,10 @@ public class StaminaBar : MonoBehaviour
             }
         }
     }
-
+    // METHOD TO RESET THE STAMINA BAR
     public void Reset()
     {
-        // se borra el stamina si se usa el poder
+        // DELETES THE STAMINA IF IS UDES
         staminaBar.SetColor(staminaColor);
         power = false;
         Start();
