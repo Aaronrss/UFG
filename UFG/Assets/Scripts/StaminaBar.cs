@@ -61,6 +61,7 @@ public class StaminaBar : MonoBehaviour
         // se borra el stamina si se usa el poder
         staminaBar.SetColor(staminaColor);
         power = false;
+        Start();
     }
 
 }

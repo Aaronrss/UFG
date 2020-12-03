@@ -70,6 +70,7 @@ public class PlayerAttack : MonoBehaviour
         {
             animator.SetTrigger("IsAttackingSP");
             Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+            GetComponent<StaminaBar>().Reset();
         }
     }
 }
