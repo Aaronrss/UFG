@@ -233,7 +233,7 @@ MonoBehaviour:
   ownPlayerHealth: {fileID: 0}
   ownPlayerStamina: {fileID: 0}
   playerMoves: 1
-  bullet: {fileID: 0}
+  bullet: {fileID: 1453778940192885322, guid: 8129273cc3f5e4988af6a3cbcc19e8eb, type: 3}
   bulletSpawn: {fileID: 4166106227682527503}
 --- !u!114 &1764405098211533155
 MonoBehaviour:
@@ -268,14 +268,14 @@ MonoBehaviour:
   currentStamina: 0
   staminaBar: {fileID: 0}
   power: 0
-  staminaDelay: 0.1
+  staminaDelay: 1
   nextUpdate: 0
   staminaColor:
     serializedVersion: 2
-    rgba: 16711680
+    rgba: 4294901760
   powered:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   playerId: 
   ownPlayerHealth: {fileID: 0}
 --- !u!95 &7267163712495984713

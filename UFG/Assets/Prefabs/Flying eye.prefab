@@ -385,14 +385,14 @@ MonoBehaviour:
   currentStamina: 0
   staminaBar: {fileID: 0}
   power: 0
-  staminaDelay: 0.1
+  staminaDelay: 1
   nextUpdate: 0
   staminaColor:
     serializedVersion: 2
-    rgba: 16726072
+    rgba: 4294901760
   powered:
     serializedVersion: 2
-    rgba: 16711789
+    rgba: 4294967295
   playerId: 
   ownPlayerHealth: {fileID: 0}
 --- !u!95 &3932975974052561550
