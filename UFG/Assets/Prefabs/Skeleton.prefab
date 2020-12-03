@@ -40,6 +40,7 @@ Transform:
   - {fileID: 1524941660978629074}
   - {fileID: 1371929147612873760}
   - {fileID: 7726004458028488733}
+  - {fileID: 5268931000575885248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -228,10 +229,13 @@ MonoBehaviour:
   AttackStrength:
   - 0
   AttackButton: 32
+  AttackButtonSP: 0
   audioHit: {fileID: 872034479270050107}
   ownPlayerHealth: {fileID: 0}
   ownPlayerStamina: {fileID: 0}
   playerMoves: 1
+  bullet: {fileID: 1453778940192885322, guid: 8129273cc3f5e4988af6a3cbcc19e8eb, type: 3}
+  bulletSpawn: {fileID: 5268931000575885248}
 --- !u!95 &6489675391664003337
 Animator:
   serializedVersion: 3
@@ -371,6 +375,8 @@ MonoBehaviour:
   powered:
     serializedVersion: 2
     rgba: 4294967295
+  playerId: 
+  ownPlayerHealth: {fileID: 0}
 --- !u!1 &3105421706142123802
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,4 +466,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1998208632977761074}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7442517851547590222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5268931000575885248}
+  m_Layer: 8
+  m_Name: FireSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5268931000575885248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7442517851547590222}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.202, y: 0.14, z: 0}
+  m_LocalScale: {x: 36, y: 36, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1998208632977761074}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

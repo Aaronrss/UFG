@@ -799,6 +799,8 @@ MonoBehaviour:
     m_Bits: 512
   p1attackButton: 32
   p2attackButton: 46
+  p1attackButtonSP: 102
+  p2attackButtonSP: 44
 --- !u!1 &917322888
 GameObject:
   m_ObjectHideFlags: 0

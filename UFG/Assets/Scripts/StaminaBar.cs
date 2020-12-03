@@ -15,6 +15,9 @@ public class StaminaBar : MonoBehaviour
     public Color32 staminaColor;
     public Color32 powered;
 
+    public string playerId;
+    public PlayerHealth ownPlayerHealth;
+
 
 
     // Start is called before the first frame update
@@ -22,6 +25,7 @@ public class StaminaBar : MonoBehaviour
     {
         currentStamina = 0;
         staminaBar.SetMaxHealth(maxStamina);
+        ownPlayerHealth = gameObject.GetComponent <PlayerHealth>();
     }
 
     // METODO PARA REGISTAR ATAQUE
@@ -42,10 +46,13 @@ public class StaminaBar : MonoBehaviour
     }
     public void Update()
     {
-        if (Time.time > nextUpdate)
+        if(ownPlayerHealth.alive)
         {
-            IncreaseStamina(1);
-            nextUpdate = Time.time + staminaDelay;
+            if (Time.time > nextUpdate)
+            {
+                IncreaseStamina(1);
+                nextUpdate = Time.time + staminaDelay;
+            }
         }
     }
 

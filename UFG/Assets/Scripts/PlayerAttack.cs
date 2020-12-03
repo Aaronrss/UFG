@@ -13,10 +13,14 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange =0.05f;
     public float[] AttackStrength;
     public KeyCode AttackButton;
+    public KeyCode AttackButtonSP;
     public AudioSource audioHit;
     public PlayerHealth ownPlayerHealth;
     public StaminaBar ownPlayerStamina;
     public bool playerMoves = true;
+
+    public GameObject bullet;
+    public Transform bulletSpawn;
 
     void Start() {
         audioHit = GetComponent<AudioSource>();
@@ -60,6 +64,12 @@ public class PlayerAttack : MonoBehaviour
 
             // FUNCION PARA RETRASAR ATAQUES CONTINUOS
             NextAttack = Time.time+AttackDelay[0];
-        }   
+        }
+
+        if(ownPlayerStamina.power == true && Input.GetKeyDown(AttackButtonSP) && ownPlayerHealth.alive)
+        {
+            animator.SetTrigger("IsAttackingSP");
+            Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+        }
     }
 }

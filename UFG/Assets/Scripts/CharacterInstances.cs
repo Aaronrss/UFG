@@ -16,6 +16,8 @@ public class CharacterInstances : MonoBehaviour
     public LayerMask p2layer;
     public KeyCode p1attackButton;
     public KeyCode p2attackButton;
+    public KeyCode p1attackButtonSP;
+    public KeyCode p2attackButtonSP;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,10 @@ public class CharacterInstances : MonoBehaviour
         // set attack button
         p1.GetComponent<PlayerAttack>().AttackButton = p1attackButton;
         p2.GetComponent<PlayerAttack>().AttackButton = p2attackButton;
+
+        // set attack button
+        p1.GetComponent<PlayerAttack>().AttackButtonSP = p1attackButtonSP;
+        p2.GetComponent<PlayerAttack>().AttackButtonSP = p2attackButtonSP;
 
         // set gravity
         if (PlayerPrefs.GetInt("Stage") == 1)
