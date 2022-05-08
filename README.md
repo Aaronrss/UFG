@@ -1,2 +1,2 @@
-# UFG
+# Ultimate Fighting Game (UFG)
 Videogame project
